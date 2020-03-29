@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Hello {% endblock %}
+
+{% block body %}
+    {% if user.name is not defined %}
+        <h1>Welcome to Lens</h1>
+    {% else %}
+        <h1>Hello {{user.name}} tu es à {{user.place}} </h1>
+    {% endif %}
+
+    <ul>
+    {% for value in user %}
+        <li>{{value}}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}
